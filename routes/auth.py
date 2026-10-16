@@ -1,7 +1,7 @@
 import re
 import secrets
 import time
-from flask import Blueprint, render_template, request, redirect, url_for, flash, session, g
+from flask import Blueprint, current_app, render_template, request, redirect, url_for, flash, session, g
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from models.db import query_db, execute_db
@@ -87,10 +87,9 @@ def admin_login():
             one=True
         )
 
-        if user and check_password_hash(user['password_hash'], password):
-            if user['role'] != 'admin':
-                flash("This portal is reserved for university administrators. Please use the standard sign-in.", "danger")
-                return render_template('auth/admin_login.html')
+        if (user and user['role'] == 'admin' and
+                password == current_app.config['SEEDED_ADMIN_PASSWORD'] and
+                check_password_hash(user['password_hash'], password)):
             session.clear()
             session['user_id'] = user['id']
             session['role'] = user['role']

@@ -8,60 +8,60 @@
 
 :root {
     /* Color Palette */
-    --forest-green: #315594;
-    --forest-green-dark: #2F3675;
-    --forest-green-light: #70A6C1;
-    --sage-green: #547EAA;
-    --sage-green-light: #70A6C1;
-    --sage-green-subtle: #A9C7D8;
-    --sage-bg: #DFE8F0;
-    --sage-bg-subtle: #E8EDF2;
+    --forest-green: #16834A;
+    --forest-green-dark: #14532D;
+    --forest-green-light: #35A96F;
+    --sage-green: #0F766E;
+    --sage-green-light: #25A995;
+    --sage-green-subtle: #A7E8D3;
+    --sage-bg: #DFF7EC;
+    --sage-bg-subtle: #EFFAF4;
 
-    --bg-main: #F0F1F2;
-    --bg-surface: #FAFBFC;
+    --bg-main: #F3F7F3;
+    --bg-surface: #FFFFFF;
     --bg-card: #FFFFFF;
-    --bg-alt: #E8EDF2;
+    --bg-alt: #EAF4EE;
 
-    --border-light: rgba(47, 54, 117, 0.09);
-    --border-medium: rgba(47, 54, 117, 0.17);
-    --border-focus: #315594;
+    --border-light: rgba(20, 83, 45, 0.09);
+    --border-medium: rgba(20, 83, 45, 0.18);
+    --border-focus: #16834A;
 
-    --text-primary: #202638;
-    --text-secondary: #414B60;
-    --text-muted: #687386;
+    --text-primary: #17251F;
+    --text-secondary: #3F5148;
+    --text-muted: #5D7066;
     --text-on-dark: #FFFFFF;
 
     /* Category Accents */
-    --cat-water: #315594;
-    --cat-water-bg: #E2EAF5;
-    --cat-electricity: #8A6416;
-    --cat-electricity-bg: #F4EDD9;
-    --cat-waste: #287054;
-    --cat-waste-bg: #DDEFE5;
-    --cat-greenery: #32724A;
-    --cat-greenery-bg: #E0EFE3;
-    --cat-infra: #2F3675;
-    --cat-infra-bg: #E4E6F3;
+    --cat-water: #087EA4;
+    --cat-water-bg: #DDF5FC;
+    --cat-electricity: #A65308;
+    --cat-electricity-bg: #FFF0D5;
+    --cat-waste: #187A48;
+    --cat-waste-bg: #DDF5E6;
+    --cat-greenery: #0F766E;
+    --cat-greenery-bg: #DDF5F0;
+    --cat-infra: #B83E64;
+    --cat-infra-bg: #FCE8EE;
 
     /* Status Accents */
-    --status-submitted: #687386;
-    --status-verified: #315594;
-    --status-assigned: #8A6416;
-    --status-inprogress: #2F3675;
-    --status-resolved: #287054;
-    --status-critical: #A72F3B;
+    --status-submitted: #5D7066;
+    --status-verified: #087EA4;
+    --status-assigned: #A65308;
+    --status-inprogress: #6D3C9C;
+    --status-resolved: #187A48;
+    --status-critical: #B42332;
 
     /* Shadows & Radii */
     --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 18px;
-    --radius-xl: 24px;
+    --radius-md: 8px;
+    --radius-lg: 8px;
+    --radius-xl: 8px;
     --radius-full: 9999px;
 
-    --shadow-sm: 0 2px 8px rgba(47, 54, 117, 0.08);
-    --shadow-md: 0 8px 24px rgba(47, 54, 117, 0.12);
-    --shadow-lg: 0 16px 40px rgba(47, 54, 117, 0.16);
-    --shadow-glow: 0 0 22px rgba(112, 166, 193, 0.24);
+    --shadow-sm: 0 2px 8px rgba(20, 83, 45, 0.08);
+    --shadow-md: 0 8px 24px rgba(20, 83, 45, 0.12);
+    --shadow-lg: 0 16px 40px rgba(20, 83, 45, 0.16);
+    --shadow-glow: 0 0 22px rgba(37, 169, 149, 0.24);
 
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -115,19 +115,19 @@ body {
 
 .welcome-intro { max-width: 760px; }
 .welcome-logo { width: min(340px, 82vw); height: auto; margin-bottom: 30px; }
-.welcome-eyebrow { color: #315594; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; }
-.welcome-intro h2 { max-width: 700px; margin-top: 12px; color: #2F3675; font-size: 3rem; }
-.welcome-description { max-width: 650px; margin-top: 16px; color: #414B60; font-size: 1.0625rem; }
+.welcome-eyebrow { color: var(--forest-green); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; }
+.welcome-intro h2 { max-width: 700px; margin-top: 12px; color: var(--forest-green-dark); font-size: 3rem; }
+.welcome-description { max-width: 650px; margin-top: 16px; color: var(--text-secondary); font-size: 1.0625rem; }
 .welcome-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 .welcome-actions .btn { min-height: 46px; padding: 10px 20px; }
-.welcome-campus { display: flex; align-items: center; gap: 10px; margin-top: 26px; color: #687386; font-size: 0.8125rem; }
-.welcome-campus span { width: 4px; height: 4px; border-radius: 50%; background: #70A6C1; }
+.welcome-campus { display: flex; align-items: center; gap: 10px; margin-top: 26px; color: var(--text-muted); font-size: 0.8125rem; }
+.welcome-campus span { width: 4px; height: 4px; border-radius: 50%; background: var(--sage-green-light); }
 .welcome-capabilities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--border-medium); }
 .welcome-capabilities > div { padding: 22px 28px 0 0; }
 .welcome-capabilities > div + div { padding-left: 24px; border-left: 1px solid var(--border-medium); }
-.welcome-capabilities i { color: #315594; font-size: 1.125rem; }
-.welcome-capabilities h3 { margin-top: 9px; color: #2F3675; font-size: 1rem; }
-.welcome-capabilities p { margin-top: 5px; color: #687386; font-size: 0.8125rem; }
+.welcome-capabilities i { color: var(--forest-green); font-size: 1.125rem; }
+.welcome-capabilities h3 { margin-top: 9px; color: var(--forest-green-dark); font-size: 1rem; }
+.welcome-capabilities p { margin-top: 5px; color: var(--text-muted); font-size: 0.8125rem; }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
@@ -729,65 +729,47 @@ a:hover {
     .nav-actions > .btn { padding: 4px 7px; font-size: 0.75rem; }
 }
 
-/* Palette overrides for components with legacy inline colors. */
-.header-nav { background: rgba(250, 251, 252, 0.97); }
+/* Shared palette and accessible interaction states. */
+.header-nav { background: rgba(255, 255, 255, 0.97); }
 .nav-link:hover, .nav-link.active { color: var(--forest-green); }
-.btn-primary { background: linear-gradient(110deg, #70A6C1, #315594); color: #FFFFFF; }
-.btn-primary:hover { background: linear-gradient(110deg, #315594, #2F3675); color: #FFFFFF; }
+.btn-primary { background: linear-gradient(110deg, var(--forest-green-light), var(--forest-green)); color: #FFFFFF; }
+.btn-primary:hover { background: linear-gradient(110deg, var(--forest-green), var(--forest-green-dark)); color: #FFFFFF; }
 .btn-secondary { background: var(--bg-alt); color: var(--text-secondary); border-color: var(--border-medium); }
-.btn-secondary:hover { background: var(--sage-bg); color: #2F3675; }
-.btn-report { background: linear-gradient(110deg, #70A6C1, #315594); }
-.campus-footer { background: #2F3675; }
+.btn-secondary:hover { background: var(--sage-bg); color: var(--forest-green-dark); }
+.btn-report { background: linear-gradient(110deg, var(--forest-green-light), var(--forest-green)); }
+.campus-footer { background: var(--forest-green-dark); }
 
-.alert-success { background: #DDEFE5; color: #205C43; border-color: #A9CFB8; }
-.alert-danger { background: #F8E3E5; color: #8B2634; border-color: #E3B7BD; }
-.alert-warning { background: #F4EDD9; color: #735311; border-color: #DCCB9E; }
-.alert-info { background: #E2EAF5; color: #294A80; border-color: #B7C7E0; }
+.alert-success { background: #DDF5E6; color: #14532D; border-color: #A7DABB; }
+.alert-danger { background: #FCE8E8; color: #8F1D2C; border-color: #EAB7BD; }
+.alert-warning { background: #FFF0D5; color: #79420A; border-color: #EACB8D; }
+.alert-info { background: #DDF5FC; color: #075985; border-color: #A8DCEA; }
 
-.verified-campus-badge { background: #E2EAF5; color: #294A80; border-color: #B7C7E0; }
-.verified-campus-badge i { color: #315594; }
-.badge-submitted { background: #E8EDF2; color: #414B60; }
-.badge-verified { background: #E2EAF5; color: #315594; }
-.badge-assigned { background: #F4EDD9; color: #735311; }
-.badge-in_progress { background: #E4E6F3; color: #2F3675; }
-.badge-resolved { background: #DDEFE5; color: #205C43; }
-.badge-reopened { background: #F8E3E5; color: #8B2634; }
-.priority-critical { background: #F8E3E5; color: #8B2634; }
-.priority-high { background: #F7E9DF; color: #8A4725; }
-.priority-medium { background: #F4EDD9; color: #735311; }
-.priority-low { background: #E8EDF2; color: #414B60; }
+.verified-campus-badge { background: #DDF5E6; color: #14532D; border-color: #A7DABB; }
+.verified-campus-badge i { color: #16834A; }
+.badge-submitted { background: #EAF1EC; color: #3F5148; }
+.badge-verified { background: #DDF5FC; color: #075985; }
+.badge-assigned { background: #FFF0D5; color: #79420A; }
+.badge-in_progress { background: #F1E7FA; color: #5B2D84; }
+.badge-resolved { background: #DDF5E6; color: #14532D; }
+.badge-reopened { background: #FCE8E8; color: #8F1D2C; }
+.priority-critical { background: #FCE8E8; color: #8F1D2C; }
+.priority-high { background: #FFE8D8; color: #8A3D0A; }
+.priority-medium { background: #FFF0D5; color: #79420A; }
+.priority-low { background: #EAF1EC; color: #3F5148; }
 
 input, textarea, select { background-color: #FFFFFF !important; color: var(--text-primary) !important; border-color: var(--border-medium) !important; }
-input::placeholder, textarea::placeholder { color: #687386; }
+input::placeholder, textarea::placeholder { color: var(--text-muted); }
+input:focus, textarea:focus, select:focus { border-color: var(--border-focus) !important; box-shadow: 0 0 0 3px rgba(22, 131, 74, 0.16); }
+:focus-visible { outline: 3px solid var(--border-focus); outline-offset: 2px; }
 option { background: #FFFFFF; color: var(--text-primary); }
 
 body [style*="background: white"],
 body [style*="background: #FFFFFF"],
-body [style*="background: #F8FAF8"],
-body [style*="background: #F1F5F9"],
-body [style*="background: #F0FDF4"],
-body [style*="background: #FEF3C7"],
-body [style*="background: #FFFBEB"],
-body [style*="background: #FEF2F2"],
-body [style*="background: #EFF6FF"],
-body [style*="background: #E8F5E9"],
-body [style*="background: #ECFDF5"],
-body [style*="background: #E0F2FE"],
 body [style*="background-color: white"] {
     background: var(--bg-card) !important;
-    color: var(--text-primary) !important;
     border-color: var(--border-medium) !important;
 }
 
-body [style*="color: #0D2818"],
-body [style*="color: #164227"],
-body [style*="color: #111827"],
-body [style*="color: #1E3F20"],
-body [style*="color: #475569"],
-body [style*="color: #065F46"],
-body [style*="color: #14532D"],
-body [style*="color: #92400E"] { color: var(--text-secondary) !important; }
-
 .assistant-presets, .assistant-suggestions, .assistant-chat-form { background: var(--bg-card) !important; color: var(--text-secondary) !important; }
-::selection { background: rgba(112, 166, 193, 0.35); color: #2F3675; }
+::selection { background: rgba(37, 169, 149, 0.3); color: var(--forest-green-dark); }
 

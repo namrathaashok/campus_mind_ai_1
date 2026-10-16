@@ -1,7 +1,7 @@
 import os
 import secrets
 from pathlib import Path
-from flask import Flask, render_template, session, g, request, redirect, url_for, flash
+from flask import Flask, render_template, session, g, request, redirect, url_for, flash, send_from_directory
 from config import Config
 from models.db import init_app, init_db, query_db, get_db
 from services.seed_service import rotate_legacy_seed_passwords, seed_database
@@ -95,6 +95,34 @@ def create_app(config_class=Config):
     def internal_server_error(e):
         return render_template('base.html', error_title="500 - Server Error",
                                error_msg="An unexpected error occurred. Please contact the DSU Facilities IT Cell."), 500
+
+    # ------------------------------------------------------------------
+    # React dashboard  — serve the Vite production build from Flask
+    # The Vite dev server (npm run dev) remains the preferred local route;
+    # these routes let Flask serve the built SPA in production or for
+    # end-to-end verification without running two separate servers.
+    # ------------------------------------------------------------------
+    FRONTEND_DIST = Path(__file__).resolve().parent / "frontend" / "dist"
+
+    @app.route('/react-dashboard')
+    @app.route('/react-dashboard/')
+    def react_dashboard():
+        """Serve the compiled React SPA entry point."""
+        dist_index = FRONTEND_DIST / "index.html"
+        if dist_index.exists():
+            return send_from_directory(str(FRONTEND_DIST), "index.html")
+        return (
+            "<h2>React dashboard not built yet.</h2>"
+            "<p>Run <code>cd frontend &amp;&amp; npm run build</code> first, "
+            "then refresh this page.</p>",
+            200,
+        )
+
+    @app.route('/react-dashboard/assets/<path:filename>')
+    def react_assets(filename):
+        """Serve Vite-generated JS/CSS asset chunks."""
+        assets_dir = FRONTEND_DIST / "assets"
+        return send_from_directory(str(assets_dir), filename)
 
     return app
 

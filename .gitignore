@@ -29,6 +29,12 @@ instance/
 static/uploads/*
 !static/uploads/.gitkeep
 
+# Node
+node_modules/
+
+# Binaries
+ngrok.exe
+
 # OS
 .DS_Store
 Thumbs.db

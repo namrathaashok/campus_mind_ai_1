@@ -40,12 +40,12 @@
     flex-shrink: 0;
 }
 
-.kpi-icon.reports { background: #E0F2FE; color: #0284C7; }
-.kpi-icon.pending { background: #FEF3C7; color: #D97706; }
-.kpi-icon.resolved { background: #DCFCE7; color: #16A34A; }
-.kpi-icon.carbon { background: #F3E8FF; color: #9333EA; }
-.kpi-icon.solar { background: #FEF9C3; color: #CA8A04; }
-.kpi-icon.water { background: #E0F2FE; color: #0369A1; }
+.kpi-icon.reports { background: #DDF5FC; color: #075985; }
+.kpi-icon.pending { background: #FFF0D5; color: #79420A; }
+.kpi-icon.resolved { background: #DDF5E6; color: #14532D; }
+.kpi-icon.carbon { background: #FCE8EE; color: #9B3154; }
+.kpi-icon.solar { background: #FFF4C2; color: #805600; }
+.kpi-icon.water { background: #DDF5F0; color: #0F625C; }
 
 .kpi-content {
     flex: 1;
@@ -150,13 +150,6 @@
 .priority-dot.high { background: #EA580C; }
 .priority-dot.medium { background: #EAB308; }
 .priority-dot.low { background: #64748B; }
-
-.kpi-icon.reports { background: #173442; color: #65C8F0; }
-.kpi-icon.pending { background: #3A2D1D; color: #F4BC68; }
-.kpi-icon.resolved { background: #18352C; color: #67D7A4; }
-.kpi-icon.carbon { background: #302544; color: #C4A0FF; }
-.kpi-icon.solar { background: #3A321C; color: #F4D27C; }
-.kpi-icon.water { background: #173442; color: #65C8F0; }
 
 .dashboard-reports-grid {
     display: grid;

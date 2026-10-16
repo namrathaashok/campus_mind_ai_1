@@ -66,6 +66,6 @@ class TestingConfig(Config):
     TESTING = True
     DATABASE_PATH = BASE_DIR / "instance" / "test_campuspulse.db"
     WTF_CSRF_ENABLED = False
-    SEEDED_ADMIN_PASSWORD = "test-admin-password"
+    SEEDED_ADMIN_PASSWORD = "admin@123"
     SEEDED_STAFF_PASSWORD = "test-staff-password"
     SEEDED_STUDENT_PASSWORD = "test-student-password"
