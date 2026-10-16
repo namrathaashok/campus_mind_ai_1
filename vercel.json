@@ -2,43 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "includeFiles": [
-          "templates/**",
-          "static/**",
-          "models/schema.sql"
-        ]
-      }
+      "use": "@vercel/python"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/static/(.*)",
-      "dest": "/app.py"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "/app.py"
-    },
-    {
-      "src": "/(assistant|report-issue|login|register|admin/login)(.*)",
-      "dest": "/app.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/app.py"
+      "source": "/(.*)",
+      "destination": "/app.py"
     }
   ]
 }
